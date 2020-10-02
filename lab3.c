@@ -16,6 +16,7 @@ int main() {
 	printf("enter n ");
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++) {
+		printf("A[%d] = ", i);
 		scanf("%d", &array1[i]);
 	}
 	sort_array(array1, n );
