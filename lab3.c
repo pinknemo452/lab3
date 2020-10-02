@@ -10,7 +10,6 @@ void sort_array(int* arr, int n) {
 			}
 		}
 	}
-	
 }
 int main() {
 	int array1[999],n;
@@ -21,7 +20,7 @@ int main() {
 	}
 	sort_array(array1, n );
 	printf("\n");
-	for (int j = 0; j < n; j++) {
+	for (int j = n-1; j >=0; j--) {
 		printf("%d ", array1[j]);
 	}
 	return 0;
