@@ -1,5 +1,5 @@
 #include<stdio.h>
-int predicate(int a, int b) {
+int greater(int a, int b) {
 	if (a > b) {
 		return a;
 	}
@@ -11,7 +11,7 @@ void sort_array(int* arr, int n,int (*predicate)(int)) {
 	int x;
 	for (int i = 1; i <= n - 1; i++) {
 		for (int j = 0; j < n - i; j++) {
-			if (predicate(*(arr + j), *(arr + j + 1)) == *(arr + j)/**(arr + j) > * (arr + j + 1)*/) {
+			if (predicate(*(arr + j), *(arr + j + 1)) == *(arr + j)) {
 				x = *(arr + j);
 				*(arr + j) = *(arr + j + 1);
 				*(arr + j + 1) = x;
@@ -27,7 +27,7 @@ int main() {
 		printf("A[%d] = ", i);
 		scanf("%d", &array1[i]);
 	}
-	sort_array(array1, n, predicate );
+	sort_array(array1, n, greater );
 	printf("\n");
 	for (int j = n-1; j >=0; j--) {
 		printf("%d ", array1[j]);
